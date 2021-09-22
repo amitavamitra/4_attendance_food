@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+<title>Team4205</title>
+<body>
+  <form action="/" method="post" enctype="multipart/form-data">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <nav class="navbar navbar-default">
+        <a class="navbar-brand" href="#">
+            <img src="static/img/nova_dancing.gif" width="80" height="80" alt="">
+          </a>
+      <div class="container">
+        <div class="navbar-header">
+          <h1>Canteen - Team4205</h1>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li id="home"><a href="/">HOME</a></li>
+            <li id="mission"><a href="/mission">OUR MISSION</a></li>
+            <li id="about"><a href="/about">ABOUT US</a></li>
+            <li id="about"><a href="">Think</a></li>
+            <li id="contact"><a href="#">CONTACT US</a></li>
+            <li id="architecture"><a href="#">IT ARCHITECTURE</a></li>
+            
+            <li id="cardb"><a href="/cardb">CAR DATABASE</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <div>
+        <<div class="container">>
+            <div class = "row">
+    <div class="col-xs-6">
+              <label for="vid"><h2>Attendance Camera for Face Recognition</h2></label>
+              <br>
+               <img src="{{url_for('video')}}"  width="100%" id="vid" class="img-fluid"/>
+            </div>
+            <div class="col-xs-6">
+              <label for="vid"><h2>Camera at Tray for Food Recognition</h2></label>
+            <br>
+             <img src="{{url_for('video_food')}}"  width="100%" id="food" class="img-fluid"/>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</body>
+</html>
